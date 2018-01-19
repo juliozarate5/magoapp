@@ -4,7 +4,7 @@
   "description": "Oficial App Mango",
   "repository": {
     "type": "git",
-    "url": "https://github.com/juliozarate5/magoapp"
+    "url": "https://github.com/juliozarate5/magoapp.git"
   },
   "author": "Mango App",
   "license": "Apache-2.0",
