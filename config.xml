@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.h4ckademy.maps" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Maps</name>
+<widget id="co.mangoapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>MangoApp</name>
     <description>
-        Una aplicación simple de PhoneGap que usa geolocalización y mapas de Leaflet
+        Aplicación oficial de MangoApp
     </description>
-    <author email="h4@h4ckademy.com" href="http://h4ckademy.com">
-        h4ckademy
+    <author email="d@mango.co" href="http://mangoapp.co/">
+        MangoApp
     </author>
     <content src="index.html" />
     <access origin="*" />
