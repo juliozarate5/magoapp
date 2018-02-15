@@ -21,8 +21,8 @@ var app={
   
   refrescarIframe: function() {
     var online = navigator.onLine;
-    if (online == true) {
     var iframeContent = document.querySelector('#app');
+    if (online == true) {
     iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
     } else {
     iframeContent.innerHTML ="NO HAY CONEXION A INTERNET :(";
