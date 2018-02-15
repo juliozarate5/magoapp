@@ -1,4 +1,8 @@
-iframe{width: 1px;min-width: 100%;}
+iframe{
+    width: 1px;
+    min-width: 100%;
+    padding: 0;
+}
 body {
   scrollbar-3dlight-color: #000000;
   scrollbar-arrow-color: #ffffff;
@@ -7,4 +11,10 @@ body {
   scrollbar-highlight-color: #ffffff;
   scrollbar-shadow-color: #ffffff;
   scrollbar-track-color: #000000;
+}
+
+#app{
+    width: 100%;
+    height: 100%;
+    padding: 0;
 }
