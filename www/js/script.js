@@ -15,17 +15,12 @@ var app = {
     },
 
     iniciaBotones: function () {
-        /*var iframeContent = document.querySelector('#app');
-        var botonRefresh = document.querySelector('#botonRefresh');*/
-        
-        //var el = document.getElementById('app');
-        //el.onclick = function() {
-            //this.refrescarIframe();
-        //};
-        /*iframeContent.addEventListener('click' ,this.refrescarIframe ,false);
+        var iframeContent = document.querySelectorAll();
+        var botonRefresh = document.querySelector('#botonRefresh');
+        iframeContent.addEventListener('click' ,this.refrescarIframe ,false);
         if(botonRefresh){
             botonRefresh.addEventListener('click', this.refrescarIframe, false);
-        }*/
+        }
     },
 
     checkNetConnection: function () {
@@ -52,7 +47,7 @@ var app = {
         if (online) {
             iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
         } else {
-            iframeContent.innerHTML = "<div id='botonRefresh'>Volver a cargar</div>";
+            iframeContent.innerHTML = "NO HAY CONEXION <div id='botonRefresh'> - Toca para volver a cargar - </div>";
         }
     },
 };
