@@ -23,17 +23,18 @@ var app={
     }
   },
   
+  updateOnlineStatus: function(){
+      var iframeContent = document.querySelector('#app');
+      iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
+  },
+  
+  updateOfflineStatus: function(){
+      var iframeContent = document.querySelector('#app');
+      iframeContent.innerHTML ="NO HAY CONEXION A INTERNET :(";  },
+  
   refrescarIframe: function() {
-    /*window.addEventListener('online',  updateOnlineStatus);
-    window.addEventListener('offline', updateOfflineStatus);*/
-    var online = navigator.onLine;
-    alert(online);
-    var iframeContent = document.querySelector('#app');
-    if (!online) {
-    iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
-    } else {
-    iframeContent.innerHTML ="NO HAY CONEXION A INTERNET :(";
-    }
+    window.addEventListener('online',  this.updateOnlineStatus);
+    window.addEventListener('offline', this.updateOfflineStatus);
   },
 };
 
