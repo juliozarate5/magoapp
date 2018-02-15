@@ -58,5 +58,4 @@ if ('addEventListener' in document) {
     document.addEventListener("deviceready", function () {
         app.inicio();
     }, false);
-}
-;
+};
