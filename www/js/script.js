@@ -15,12 +15,17 @@ var app = {
     },
 
     iniciaBotones: function () {
-        var iframeContent = document.querySelector('#app');
-        var botonRefresh = document.querySelector('#botonRefresh');
-        iframeContent.addEventListener('click' ,this.refrescarIframe ,false);
+        /*var iframeContent = document.querySelector('#app');
+        var botonRefresh = document.querySelector('#botonRefresh');*/
+        
+        //var el = document.getElementById('app');
+        //el.onclick = function() {
+            //this.refrescarIframe();
+        //};
+        /*iframeContent.addEventListener('click' ,this.refrescarIframe ,false);
         if(botonRefresh){
             botonRefresh.addEventListener('click', this.refrescarIframe, false);
-        }
+        }*/
     },
 
     checkNetConnection: function () {
