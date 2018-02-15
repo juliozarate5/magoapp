@@ -49,7 +49,7 @@ var app = {
         if (online) {
             iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
         } else {
-            iframeContent.innerHTML = "<p>NO HAY CONEXION A INTERNET :(</p> <button id='botonRefresh'>Volver a cargar</button>";
+            iframeContent.innerHTML = "<p>NO HAY CONEXION A INTERNET</p> <button id='botonRefresh'>Volver a cargar</button>";
         }
     },
 };
