@@ -18,7 +18,9 @@ var app = {
         var iframeContent = document.querySelector('#app');
         var botonRefresh = document.querySelector('#botonRefresh');
         iframeContent.addEventListener('click' ,this.refrescarIframe ,false);
-        botonRefresh.addEventListener('click', this.refrescarIframe, false);
+        if(botonRefresh){
+            botonRefresh.addEventListener('click', this.refrescarIframe, false);
+        }
         var iframe = document.querySelector('#myIframe');
         if (iframe) {
             iframe.addEventListener('click', this.refrescarIframe, true);
@@ -49,7 +51,7 @@ var app = {
         if (online) {
             iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
         } else {
-            iframeContent.innerHTML = "<p>NO HAY CONEXION A INTERNET</p> <button id='botonRefresh'>Volver a cargar</button>";
+            iframeContent.innerHTML = "<div id='botonRefresh'>Volver a cargar</div>";
         }
     },
 };
