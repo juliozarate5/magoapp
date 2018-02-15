@@ -15,12 +15,10 @@ var app = {
     },
 
     iniciaBotones: function () {
-        var iframeContent = document.querySelectorAll();
-        var botonRefresh = document.querySelector('#botonRefresh');
-        iframeContent.addEventListener('click' ,this.refrescarIframe ,false);
-        if(botonRefresh){
-            botonRefresh.addEventListener('click', this.refrescarIframe, false);
-        }
+        //var iframeContent = document.querySelectorAll();
+
+        document.body.addEventListener('click' ,this.refrescarIframe ,false);
+ 
     },
 
     checkNetConnection: function () {
