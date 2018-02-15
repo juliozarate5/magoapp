@@ -19,22 +19,24 @@ var app={
     iframeContent.addEventListener('click' ,this.refrescarIframe ,true);
     var iframe = document.getElementById('myIframe');
     if(iframe){
-        iframe.addEventListener('click' ,this.refrescarIframe ,false);
+        iframe.addEventListener('click' ,this.refrescarIframe ,true);
     }
   },
   
-  updateOnlineStatus: function(){
-      var iframeContent = document.querySelector('#app');
-      iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
+  handleConnectionChange: function(evt){
+    var iframeContent = document.querySelector('#app');
+    if(event.type == "offline"){
+        iframeContent.innerHTML = "NO CONEXION :(";
+    }
+    if(event.type == "online"){
+        iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
+    }
+    alert(new Date(event.timeStamp));
   },
-  
-  updateOfflineStatus: function(){
-      var iframeContent = document.querySelector('#app');
-      iframeContent.innerHTML ="NO HAY CONEXION A INTERNET :(";  },
-  
+
   refrescarIframe: function() {
-    window.addEventListener('online',  this.updateOnlineStatus);
-    window.addEventListener('offline', this.updateOfflineStatus);
+    window.addEventListener('online', this.handleConnectionChange);
+    window.addEventListener('offline', this.handleConnectionChange);
   },
 };
 
