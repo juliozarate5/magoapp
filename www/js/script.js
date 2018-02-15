@@ -21,10 +21,6 @@ var app = {
         if(botonRefresh){
             botonRefresh.addEventListener('click', this.refrescarIframe, false);
         }
-        var iframe = document.querySelector('#myIframe');
-        if (iframe) {
-            iframe.addEventListener('click', this.refrescarIframe, true);
-        }
     },
 
     checkNetConnection: function () {
