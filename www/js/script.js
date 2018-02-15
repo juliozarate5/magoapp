@@ -15,8 +15,10 @@ var app = {
     },
 
     iniciaBotones: function () {
-        /*var iframeContent = document.querySelector('#app');
-         iframeContent.addEventListener('click' ,this.refrescarIframe ,true);*/
+        var iframeContent = document.querySelector('#app');
+        var botonRefresh = document.querySelector('#botonRefresh');
+        iframeContent.addEventListener('click' ,this.refrescarIframe ,false);
+        botonRefresh.addEventListener('click', this.refrescarIframe, false);
         var iframe = document.querySelector('#myIframe');
         if (iframe) {
             iframe.addEventListener('click', this.refrescarIframe, true);
@@ -41,15 +43,13 @@ var app = {
     },
 
     refrescarIframe: function () {
-        /*window.addEventListener('online',  updateOnlineStatus);
-         window.addEventListener('offline', updateOfflineStatus);*/
         var online = this.checkNetConnection();
         alert(online);
         var iframeContent = document.querySelector('#app');
         if (online) {
             iframeContent.innerHTML = "<iframe id='myIframe' height='650px' src='https://mangoapp.co/' frameborder=0  scrolling='yes' width=100%></iframe>";
         } else {
-            iframeContent.innerHTML = "NO HAY CONEXION A INTERNET :(";
+            iframeContent.innerHTML = "<p>NO HAY CONEXION A INTERNET :(</p> <button id='botonRefresh'>Volver a cargar</button>";
         }
     },
 };
