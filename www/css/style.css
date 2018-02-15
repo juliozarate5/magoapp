@@ -1,22 +1,20 @@
-iframe{
-    /*width: 1px;*/
-    min-width: 100%;
-    margin: none;
-    padding: none;
-    border: none;
+iframe {
+    margin: 0px !important;
+    padding: 0px !important;
+    background: blue; /* this is just to make the frames easier to see */
+    border: 0px !important;
 }
-body {
- /* scrollbar-3dlight-color: #000000;
-  scrollbar-arrow-color: #ffffff;
-  scrollbar-darkshadow-color: #000000;
-  scrollbar-face-color: #000000;
-  scrollbar-highlight-color: #ffffff;
-  scrollbar-shadow-color: #ffffff;
-  scrollbar-track-color: #000000;*/
+
+html, body {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px !important;
+    width: 100%;
+    height: 100%;
 }
 
 #app{
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding: none;
 }
